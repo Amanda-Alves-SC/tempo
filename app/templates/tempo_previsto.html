@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<title>Document</title>
+<link rel="stylesheet" type="text/css"  href="/static/css/tempo_previsto.css">
+<!-- Bootstrap Font Icon CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">  </head>
+</head>
+
+<body>
+
+    <div class="previsao">
+        <h2>Previsão do tempo</h2>
+        {% if erro %}
+        <p style="color: red;">{{ erro }}</p>
+        {% else %}
+        <p><strong>Cidade:</strong> {{ cidade }}</p>
+        <p><strong>Temperatura:</strong> {{ temperatura }}°C</p>
+        <p><strong>Descrição:</strong> {{ descricao }}</p>
+        {% endif %}
+    </div>
+
+    <video autoplay muted loop class="bg-video">
+        <source src="{{ url_for('static', filename='video/' + video) }}" type="video/mp4">
+    </video>
+</body>

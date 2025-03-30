@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<title>Document</title>
+<link rel="stylesheet" type="text/css"  href="/static/css/previsao.css">
+<!-- Bootstrap Font Icon CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">  </head>
+</head>
+
+<body>
+<!-- Conteúdo -->
+    <form action="/previsao" method="post" id="previsao">
+        <div class="form-content">
+            <h2 class="form-title">Previsão do tempo em São Paulo</h2>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Escolha sua cidade</label>
+                <select class="form-control" name="cidadeSelect" id="cidadeSelect">
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Campinas">Campinas</option>
+                    <option value="Santos">Santos</option>
+                    <option value="São Bernardo do Campo">São Bernardo do Campo</option>
+                    <option value="São José dos Campos">São José dos Campos</option>
+                    <option value="Sorocaba">Sorocaba</option>
+                    <option value="Ribeirão Preto">Ribeirão Preto</option>
+                    <option value="Guarulhos">Guarulhos</option>
+                    <option value="Osasco">Osasco</option>
+                    <option value="Mauá">Mauá</option>
+                    <option value="Carapicuíba">Carapicuíba</option>
+                    <option value="Jundiaí">Jundiaí</option>
+                    <option value="Bauru">Bauru</option>
+                    <option value="Piracicaba">Piracicaba</option>
+                    <option value="Itaquaquecetuba">Itaquaquecetuba</option>
+                    <option value="Franca">Franca</option>
+                    <option value="Suzano">Suzano</option>
+                    <option value="Taboão da Serra">Taboão da Serra</option>
+                    <option value="São Vicente">São Vicente</option>
+                    <option value="Barueri">Barueri</option>
+                    <option value="Jacareí">Jacareí</option>
+                    <option value="Taubaté">Taubaté</option>
+                    <option value="Mogi das Cruzes">Mogi das Cruzes</option>
+                    <option value="Americana">Americana</option>
+                    <option value="Itu">Itu</option>
+                  </select>
+            </div>
+            <button type="submit" class="enviar">Enviar</button>
+        </div>
+    </form>
+
+    <video autoplay muted loop class="bg-video">
+        <source src="{{ url_for('static', filename='video/sol.mp4') }}" type="video/mp4">
+      </video>
+</body>
+</html>
